@@ -1,0 +1,5 @@
+.sass-cache/
+output/
+tmp/
+crash.log
+Gemfile.lock

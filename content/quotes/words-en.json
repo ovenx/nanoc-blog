@@ -1,0 +1,28 @@
+[
+    {
+        "content": [
+                    "God grant me the serenity to accept the things I cannot change;",
+                    "Courage to change the things I can;",
+                    "And wisdom to know the difference."
+                ],
+        "author": "Reinhold Niebohr",
+        "from": "The Serentiy Prayer"
+    }
+    ,
+    {
+        "content": [
+                    "To see a world in a grain of sand",
+                    "And a heaven in a wild flower,",
+                    "Hold infinity in the palm of your hand",
+                    "And eternity in an hour."
+                   ],
+        "author": "William Blake",
+        "from": "To see a world in a grain of sand"
+    }
+    ,
+    {
+        "content": "In me the tiger sniffs the rose.",
+        "author": "Siegfried Sassoon",
+        "from": "In me, past, present, future meet"
+    }
+]

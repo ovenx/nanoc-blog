@@ -1,0 +1,7 @@
+footer.ui.center.aligned.container lang='en'
+  hr
+  p == config[:meta][:copyright] 
+script src="/static/dist/semantic-ui/semantic.min.js"
+script src="/static/js/main.js"
+/- if @item.identifier.to_s.start_with? '/posts'
+/  script src="/static/js/disqus.js"

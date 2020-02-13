@@ -1,0 +1,305 @@
+/*font*/
+.font-hei 
+  font-family: -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif
+
+.font-kai 
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW\-Kai", serif
+
+.font-song
+  font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif
+
+.font-fang-song
+  font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif
+
+/* Some mixins
+=font-feature-settings($smcp, $onum)
+  -moz-font-feature-settings: "smcp" $smcp, "onum" $onum
+  -ms-font-feature-settings: "smcp" $smcp, "onum" $onum
+  -o-font-feature-settings: "smcp" $smcp, "onum" $onum
+  -webkit-font-feature-settings: "smcp" $smcp, "onum" $onum
+  font-feature-settings: "smcp" $smcp, "onum" $onum
+
+
+/* Basic style for some HTML elrements
+body
+  -moz-font-feature-settings: "onum" 1, "pnum" 1, "afrc" 1, "kern" 1, "liga" 1, "dlig" 1
+  -ms-font-feature-settings: "onum" 1, "pnum" 1, "afrc" 1, "kern" 1, "liga" 1, "dlig" 1
+  -o-font-feature-settings: "onum" 1, "pnum" 1, "afrc" 1, "kern" 1, "liga" 1, "dlig" 1
+  -webkit-font-feature-settings: "onum" 1, "pnum" 1, "afrc" 1, "kern" 1, "liga" 1, "dlig" 1
+  font-feature-settings: "onum" 1, "pnum" 1, "afrc" 1, "kern" 1, "liga" 1, "dlig" 1
+  background-color: #F8F8F8
+
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer,
+.ui.menu,
+.ui.header
+  @extend .font-kai
+
+pre, code
+  font-family: "Linux Libertine Mono", Menlo, Monaco, monospace
+
+footer
+  margin: 1rem 0
+  &.center.aligned p
+    text-align: center
+
+
+ul,
+ol
+  padding-left: 2rem
+
+p
+  word-wrap: break-word
+  line-height: 1.5rem
+  [lang='cn'] &
+    text-align: justify
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-bottom: 3px double #EEE
+  margin: 1rem 0
+  padding: 0
+  &.plain
+    border-bottom: 1px solid #DDD
+
+.page
+  width:auto
+
+/* pace js*/
+.pace
+  -webkit-pointer-events: none
+  pointer-events: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  user-select: none
+  .pace-progress
+    background: gray
+    position: fixed
+    z-index: 2000
+    top: 0
+    right: 100%
+    width: 100%
+    height: 2px
+
+.pace-inactive
+  display: none
+
+/* blockquote styles comes from bootstrap*/
+.words-cn
+  border-bottom: 3px solid #eee
+
+.words-en
+  border-top: 3px solid #eee
+
+.content-middle-img
+  width: 500px !important
+
+blockquote
+  padding: 0.6rem 1rem 0.4rem
+  margin: 0 0 0.8rem
+  border-left: 3px solid #eee
+  p
+    line-height: 1.2rem
+    margin-bottom: 0.3rem
+    /*text-align: start !important*/
+    &:last-child
+      margin-bottom: 0
+  ul:last-child,
+  ol:last-child
+    margin-bottom: 0
+  footer,
+  small,
+  .small
+    margin-bottom: 0.5rem
+    display: block
+    font-size: 80%
+    line-height: 1.428571429
+    color: #999
+    padding: 0
+  footer:before,
+  small:before,
+  .small:before
+    content: "\2014 \00A0"
+  cite:before
+    content: '«'
+  cite:after
+    content: '»'
+
+#TOC
+  overflow: hidden
+  color: #999
+  border: 1px solid #ddd
+  margin-bottom: 1rem
+  box-shadow: 3px 3px 3px #eee
+  position: relative
+  font-size: 90%
+  ul
+    ul
+      padding-top: 5px
+#TOC:before
+  position: absolute 
+  top: 0
+  right: 0
+  padding: 5px 10px
+  content: 'TOC'
+img
+  width: 100%
+  &.logo
+    width: 200px
+    margin: 3rem 0 1rem
+
+/* Styles for sremantic-ui elrements
+.ui
+  &.alternative.segment
+    background: #FFFFFF
+  &.vertical.stripe.segment
+    padding: 4rem 0
+  &.vertical.segment:first-child
+    padding-top: 0
+  &.vertical.segment
+    padding: 2rem 0
+
+.ui
+  &.menu
+    border-radius: 0
+    box-shadow: none
+    margin-bottom: 0
+    +font-feature-settings(0, 0)
+
+    form
+      font-size: 14px
+
+    input
+      +font-feature-settings(0, 0)
+      font-size: 14px
+
+.ui
+  &.button
+    border-radius: 0
+  &.basic.button
+    border-radius: 0
+  &.progress
+    margin: 1rem 0
+    .ui.label
+      font-size: 0.8rem
+      padding-top: 0.5rem
+      padding-bottom: 0.2rem
+
+.ui.article
+  &.segment
+    font-feature-settings: "onum" 0
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.65)
+    margin: 1.5rem 0 2.5rem 0
+    padding-top: 2rem
+    border-radius: 0
+  > .ui.grid > .row
+    &.article-head
+      padding-bottom: 1rem
+    &.article-body
+      padding-top: 0
+
+      > .twelve
+        a:hover
+          color: #035
+          border-bottom: 1px dotted
+        figure
+          display: inline-block
+          margin: 1em 0
+          padding: 10px
+          overflow: hidden
+          color: #999
+          border: 1px solid #ddd
+          box-shadow: 3px 3px 3px #eee
+          font-size: 90%
+
+      > aside
+        display: table
+        > .ui
+          &.header
+            margin-bottom: 0.2rem
+          &.list
+            margin-top: 0.5rem
+            margin-bottom: 0.5rem
+      .ui.header a
+        color: inherit
+      .ui.header a:hover
+        border-bottom: 1px dotted
+.ui.label
+  border-radius: 0 
+
+.go-top
+  position: fixed
+  bottom: 5%
+  right: 2em
+  border: 1px solid #ddd
+  box-shadow: 3px 3px 3px #eee
+  padding: 8px
+  border-radius: 0
+  display: none
+  &:hover
+    background: #eee
+  i
+    color: #999
+    margin: 0
+    font-size: 1.5em
+
+
+/* Enable smallcaps and oldstyle-number OpenType features for English
+[lang='en']
+  +font-feature-settings(0, 1)
+
+/* Disable smallcaps and oldstyle-number OpenType features for Chinese
+[lang='cn']
+  +font-feature-settings(0, 0)
+
+/* TeX and LaTeX Logo in HTML
+.tex sub
+  text-transform: uppercase
+  top: auto
+  bottom: auto
+
+.latex
+  sub,
+  sup
+    text-transform: uppercase
+    top: auto
+    bottom: auto
+
+.tex sub,
+.latex sub
+  vertical-align: -0.5ex
+  margin-left: -0.1667rem
+  margin-right: -0.125rem
+
+.tex,
+.latex,
+.tex sub,
+.latex sub
+  font-size: 1rem
+
+/* disqus comment div
+#disqus_thread
+  margin-top: 2rem
+
+@media only screen and (max-width: 767px)
+  .ui.menu .item.desktop-only
+    display: none
+
+  .ui[class*="padded"].segment
+    padding: 1.5rem
+
+  .ui.grid .ui.stackable.grid
+    margin-left: 0 !important
+    margin-right: 0 !important
+
+  .ui.container
+    margin-left: .5em !important
+    margin-right: .5em !important

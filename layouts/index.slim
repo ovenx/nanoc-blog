@@ -1,0 +1,46 @@
+---
+lang: cn
+---
+
+.ui.stackable.container
+  .ui.very.padded.segment.article
+    article.ui.stackable.divided.grid
+      header.row.article-head
+        .column
+          h1 == config[:meta][:title]
+          hr
+      .row.article-body
+        section.eleven.wide.column
+          - pages = sorted_articles.slice((@item_id-1)*@config[:page_size], @config[:page_size])
+          - pages.each do |article|
+            .ui.vertical.segment
+              h2.ui.header
+                == link_to(article[:title], article.path)
+                .sub.header
+                  == article[:created_at].to_date
+              == summary(article)
+              .ui.tiny.basic.button
+                == link_to("Read More…", article.path)
+
+        aside.five.wide.column
+          blockquote.words-cn
+          blockquote.words-en
+
+        - pages_count = (sorted_articles.size) / @config[:page_size]
+        - if pages_count > 1
+            .ui.stackable.page.menu
+                - if @item_id > 1
+                    - prev_link = @item_id > 2 ? "/page/#{@item_id - 1}/" : "/"
+                    a.prev.item href=prev_link Pre
+
+                - (1..pages_count).each_with_index do |page_index|
+                    - page_link = page_index > 1 ? "/page/#{page_index}/" : "/"
+                    - if page_index == @item_id
+                        a.item.active
+                            == page_index
+                    - else
+                        a.item href=page_link
+                            == page_index
+
+                - if @item_id < pages_count
+                    a.item.next.page-numbers href="/page/#{@item_id + 1}/" Next
